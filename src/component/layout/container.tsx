@@ -1,6 +1,6 @@
 import clsx from 'clsx'
 import React from 'react'
-import { Props } from 'interfaces'
+import { ContainerProps as Props } from 'interfaces'
 
 export const Container = ({ className, children, ...others }: Props) => {
   return (

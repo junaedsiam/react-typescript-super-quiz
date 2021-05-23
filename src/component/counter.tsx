@@ -8,12 +8,17 @@ import {
 
 const Counter = ({ className = '' }: { className?: string }) => {
   const [time, setTime] = useState(getSecondsFromHour(8))
+
   useEffect(() => {
-    const interval = setInterval(() => setTime((t) => t - 1), 1000)
-    return () => {
-      clearInterval(interval)
+    let timeout: NodeJS.Timeout
+    if (time > 0) {
+      timeout = setTimeout(() => setTime((t) => t - 1), 1000)
     }
-  }, [])
+    return () => {
+      clearTimeout(timeout)
+    }
+  }, [time])
+
   return (
     <div className={className}>
       <p className="mb-4 text-gray-700">This Quiz Ends In</p>
