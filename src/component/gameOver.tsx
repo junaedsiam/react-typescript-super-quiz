@@ -1,5 +1,5 @@
 import { GameOverProps } from 'interfaces'
-import Button from './button'
+import Button from './ui/button'
 const GameOver = ({ resetGameState, userAnswers }: GameOverProps) => {
   const score = userAnswers.reduce((total, answer) => {
     total = total + (answer.answer === answer.correctAnswer ? 1 : 0)

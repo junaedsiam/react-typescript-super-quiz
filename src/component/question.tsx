@@ -53,9 +53,8 @@ const Question = ({
               className={btnClass(userAnswer, option)}
               key={option}
               onClick={() => !userAnswer && handleUserClick(option)}
-            >
-              {option}
-            </button>
+              dangerouslySetInnerHTML={{ __html: option }}
+            ></button>
           ))}
       </div>
     </div>

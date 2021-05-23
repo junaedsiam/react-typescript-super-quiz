@@ -1,4 +1,4 @@
-import Button from './button'
+import Button from './ui/button'
 import Counter from './counter'
 import React from 'react'
 import { ContentContainer } from 'component/layout'
